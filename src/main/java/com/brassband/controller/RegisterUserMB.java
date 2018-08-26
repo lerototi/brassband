@@ -29,12 +29,11 @@ public class RegisterUserMB {
 	
 	private User user = new User();
 	private ProfileUser profileUser = new ProfileUser();
-	private Authority authority = new Authority();
+	
 	
 	private String confirmPw;
 	
 	public String save() {
-		authorityService.findOne((long) 1);
 		userService.addUser(user, profileUser);
 		return "";
 				

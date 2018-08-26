@@ -19,7 +19,6 @@ public class UserService {
 	
 	@Transactional
 	public List<User> getAllUsers(){
-		System.out.println("service");
 		return (List<User>) userRepository.findAll();
 	}
 	
@@ -40,7 +39,9 @@ public class UserService {
 		
 		//set actual date
 		profileUser.setDateOfCreationProfile(date);
-			
+		
+		//set relations
+		profileUser.setUser(user);
 		user.setPflUser(profileUser);
 		return userRepository.save(user) != null;
 	}
