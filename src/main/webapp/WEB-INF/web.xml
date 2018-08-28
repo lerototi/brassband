@@ -17,6 +17,10 @@
 		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
 	
+	<!-- SPRING SECURITY -->
+	
+	
+	
 	<!-- PRIMEFACES THEME -->
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
