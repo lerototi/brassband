@@ -19,7 +19,7 @@ public class AuthorityService {
 	}
 	
 	@Transactional
-	public Authority findByName(String name) {
-		return authorityRepository.findByName(name);
+	public Authority findByName(String role) {
+		return authorityRepository.findByRole(role);
 	}
 }
