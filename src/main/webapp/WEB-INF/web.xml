@@ -16,7 +16,14 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
-	
+
+	<!-- SPRING SECURITY -->
+
+	<context-param>
+		<param-name>javax.faces.FACELETS_LIBRARIES</param-name>
+		<param-value>/WEB-INF/springsecurity.taglib.xml</param-value>
+	</context-param>
+
 	<!-- PRIMEFACES THEME -->
 	<context-param>
 		<param-name>primefaces.THEME</param-name>

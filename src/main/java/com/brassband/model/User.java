@@ -30,8 +30,10 @@ public class User implements Serializable {
 	private String mail;
 	@Column(name="cellphone", nullable =  false, length = 15)
 	private String cellphone;
-	@Column(name = "password", nullable = false, length = 20)
+	@Column(name = "password", nullable = false, length = 150)
 	private String password;
+	@Column(name = "enabled", nullable = false)
+	private boolean enabled;
 
 	
 	@OneToOne(mappedBy="user",cascade = CascadeType.ALL, fetch = FetchType.LAZY)
