@@ -43,10 +43,6 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter{
 		.and()
 			.csrf().disable();
 		
-		
-	
-		
-		
 	}
 	
 	@Override
