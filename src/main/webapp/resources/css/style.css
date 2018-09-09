@@ -157,3 +157,10 @@ nav {
 	background-color: white;
 	margin-left: 50%;
 }
+
+.user{
+	
+	position: absolute;
+	top:30px;
+	padding-left: 50%;
+}

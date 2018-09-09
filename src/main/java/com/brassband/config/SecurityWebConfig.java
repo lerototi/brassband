@@ -29,7 +29,7 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter{
 	public void configure (HttpSecurity http) throws Exception{
 		http
 		.authorizeRequests()
-			.antMatchers("/resources/**/*","/template.jsf").permitAll()
+			.antMatchers("/resources/**/*","/css/**","/javax.faces.resource/**","/template.jsf").permitAll()
 			.anyRequest().authenticated()
 		.and()
 			.formLogin()
@@ -39,11 +39,11 @@ public class SecurityWebConfig extends WebSecurityConfigurerAdapter{
 			.defaultSuccessUrl("/index.jsf",true)
 			.failureUrl("/login.jsf?error=true")
 		.and()
-		.logout().logoutSuccessUrl("/login.jsf");
+		.logout().logoutSuccessUrl("/login.jsf")
+		.and()
+			.csrf().disable();
 		
 		
-		
-		http.csrf().disable();
 	
 		
 		
